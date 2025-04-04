@@ -135,7 +135,7 @@ See `docs/ChallengesAndSolutions.md` for:
 
 ---
 
-## 👨‍🏫 Why This Project Matters (for Academia)
+## 👨‍🏫 Why This Project Matters
 
 - Demonstrates hands-on software architecture
 - Applies theory (Design Patterns, OOP, MVP) to real systems
