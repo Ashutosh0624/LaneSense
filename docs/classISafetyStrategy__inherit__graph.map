@@ -1,0 +1,9 @@
+<map id="ISafetyStrategy" name="ISafetyStrategy">
+<area shape="rect" id="node1" title=" " alt="" coords="555,5,713,97"/>
+<area shape="rect" id="node2" href="$classBlindSpotStrategy.html" title=" " alt="" coords="5,153,169,245"/>
+<area shape="rect" id="node3" href="$classCombinedSafetyStrategy.html" title=" " alt="" coords="194,145,415,252"/>
+<area shape="rect" id="node4" href="$classDistanceWarningStrategy.html" title=" " alt="" coords="439,160,626,237"/>
+<area shape="rect" id="node5" href="$classLaneOffSetWarning.html" title=" " alt="" coords="650,153,821,245"/>
+<area shape="rect" id="node6" href="$classOverSpeedStrategy.html" title=" " alt="" coords="845,153,1018,245"/>
+<area shape="rect" id="node7" href="$classTrafficSignStrategy.html" title=" " alt="" coords="1043,153,1212,245"/>
+</map>

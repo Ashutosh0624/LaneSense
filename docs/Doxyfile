@@ -1,0 +1,23 @@
+# Doxyfile configuration for LaneSense
+
+PROJECT_NAME           = "LaneSense"
+OUTPUT_DIRECTORY       = docs/doxygen_output
+GENERATE_LATEX         = NO
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+INPUT                  = src
+FILE_PATTERNS          = *.h *.cpp
+RECURSIVE              = YES
+QUIET                  = NO
+JAVADOC_AUTOBRIEF      = YES
+GENERATE_TREEVIEW      = YES
+HAVE_DOT               = YES
+DOT_PATH               = /usr/bin/dot
+CLASS_DIAGRAMS         = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+DOT_MULTI_TARGETS      = YES
+DOT_IMAGE_FORMAT       = png
+UML_LOOK               = YES
+INTERACTIVE_SVG        = YES

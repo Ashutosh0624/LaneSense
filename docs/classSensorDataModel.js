@@ -1,0 +1,26 @@
+var classSensorDataModel =
+[
+    [ "SensorDataModel", "classSensorDataModel.html#ac096b55d685a8d17540aeab68b292cd1", null ],
+    [ "dataChanged", "classSensorDataModel.html#acb63b397a92bbd56964249625042840d", null ],
+    [ "generateMockData", "classSensorDataModel.html#a44394f1a67571bf42f93032c9c41ba37", null ],
+    [ "laneoffset", "classSensorDataModel.html#a9c69d030cb558412b9f389fd6b9431ed", null ],
+    [ "leftBlindSpot", "classSensorDataModel.html#a0aa9389d10dd0b680c62a7ec936db926", null ],
+    [ "objectDistance", "classSensorDataModel.html#a066c09ef374ea1991dc3e48dbf076365", null ],
+    [ "rightBlindSpot", "classSensorDataModel.html#a820b6a28dc8522788ca728f8036304ef", null ],
+    [ "speed", "classSensorDataModel.html#a0018024179e87841e1242cf9b0a0f9b4", null ],
+    [ "startSimulation", "classSensorDataModel.html#aa2b338040f31a2ca2e65da60f9050879", null ],
+    [ "trafficSign", "classSensorDataModel.html#a4b5ee7e2efe8933730b7fdd8dfcfd2f7", null ],
+    [ "m_laneOffSet", "classSensorDataModel.html#a2b30a84f5109d2e4e8dd4407c02a694a", null ],
+    [ "m_leftBlindSpot", "classSensorDataModel.html#a9039d0772cdf045f27b8f40e087ee4ec", null ],
+    [ "m_objectDistance", "classSensorDataModel.html#ad4da57d1572ce3e4d935bb302a0182b0", null ],
+    [ "m_rightBlindSpot", "classSensorDataModel.html#a4c3162a2bbcc5aa75f7e5def4a46f91b", null ],
+    [ "m_speed", "classSensorDataModel.html#a6f2eadff4d1c82f1382307623d6279a3", null ],
+    [ "m_timer", "classSensorDataModel.html#af69e3b2e63a1d1a3972ead735407468c", null ],
+    [ "m_trafficSign", "classSensorDataModel.html#ac11ce76e086f69fc2d3bc35208ec96d1", null ],
+    [ "laneoffset", "classSensorDataModel.html#a0c7545d5b6d093cf2b2b96d926a20816", null ],
+    [ "leftBlindSpot", "classSensorDataModel.html#a448e2654ae669eef4d424405a905833c", null ],
+    [ "objectDistance", "classSensorDataModel.html#aee4f85640b6820afda6e1d1109c2f85f", null ],
+    [ "rightBlindSpot", "classSensorDataModel.html#ab888b4a6d0576dcada2c6fad1400411f", null ],
+    [ "speed", "classSensorDataModel.html#a4d653750e95977b8b5df18693adb3c1d", null ],
+    [ "trafficSign", "classSensorDataModel.html#ae4e0a944251cd612af764133f3c9c30c", null ]
+];
