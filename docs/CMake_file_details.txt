@@ -1,0 +1,157 @@
+**CMakeLists.txt IndustrialADAS Project: Full Explanation for Interview Use**
+
+---
+
+### 1. Basic Setup
+
+```cmake
+cmake_minimum_required(VERSION 3.16)
+project(IndustrialADAS VERSION 0.1 LANGUAGES CXX)
+```
+
+- **`cmake_minimum_required`**: Ensures compatibility with CMake 3.16 or later (needed for Qt 6).
+- **`project(...)`**: Sets the project name and version, which is useful for versioning, metadata, and packaging.
+
+---
+
+### 2. C++ Compiler Configuration
+
+```cmake
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+```
+
+- **`CMAKE_CXX_STANDARD`**: Specifies the use of C++17.
+- **`CMAKE_CXX_STANDARD_REQUIRED`**: Enforces strict use of C++17 (no fallback).
+
+---
+
+### 3. Qt Automatic MOC and Resource Compilation
+
+```cmake
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+```
+
+- **`AUTOMOC`**: Automatically handles meta-object compiler for signals/slots.
+- **`AUTORCC`**: Automatically compiles Qt resource files (e.g., .qrc).
+
+---
+
+### 4. Finding Qt 6 Components
+
+```cmake
+find_package(Qt6 6.2 REQUIRED COMPONENTS Core Quick Qml Gui QuickControls2 QuickLayouts)
+```
+
+- **`Core`**: Base Qt functionality (QObject, signals, etc.)
+- **`Quick`**: Qt Quick rendering engine for QML.
+- **`Qml`**: Integrates C++ and QML.
+- **`Gui`**: GUI-related events, inputs, painting.
+- **`QuickControls2`**: UI controls like buttons, sliders, etc.
+- **`QuickLayouts`**: Enables layout management inside QML.
+
+---
+
+### 5. Executable Target
+
+```cmake
+qt_add_executable(appIndustrialADAS
+    main.cpp
+)
+```
+
+- Defines the main application executable from C++.
+- Entry point is `main.cpp`.
+
+---
+
+### 6. Adding QML Module
+
+```cmake
+qt_add_qml_module(appIndustrialADAS
+    URI IndustrialADAS
+    VERSION 1.0
+    QML_FILES main.qml 
+)
+```
+
+- Registers QML files as a module.
+- Sets URI so they can be imported like: `import IndustrialADAS 1.0`
+- Enables `qrc:/IndustrialADAS/main.qml` resource path.
+
+---
+
+### 7. Include Directories
+
+```cmake
+target_include_directories(appIndustrialADAS
+    PRIVATE include src
+)
+```
+
+- Adds `include/` and `src/` directories to search path for headers.
+- Keeps architecture clean and modular.
+
+---
+
+### 8. Platform Target Properties
+
+```cmake
+set_target_properties(appIndustrialADAS PROPERTIES
+    MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
+    MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
+    MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
+    MACOSX_BUNDLE TRUE
+    WIN32_EXECUTABLE TRUE
+)
+```
+
+- Platform-specific properties for Windows and macOS.
+- Doesn't affect Linux but ensures cross-platform readiness.
+
+---
+
+### 9. Debug Build Flags
+
+```cmake
+target_compile_definitions(appIndustrialADAS
+    PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>
+)
+```
+
+- Enables QML debugging in debug builds.
+- Useful for live inspection, logging, and QML profilers.
+
+---
+
+### 10. Linking Qt Modules
+
+```cmake
+target_link_libraries(appIndustrialADAS
+    PRIVATE
+        Qt6::Core
+        Qt6::Gui
+        Qt6::Qml
+        Qt6::Quick
+        Qt6::QuickControls2
+        Qt6::QuickLayouts
+        Threads::Threads
+)
+```
+
+- Links the application against Qt 6 modules.
+- Adds `Threads::Threads` for multithreaded ADAS modules (e.g., data simulation, sensor fusion).
+
+---
+
+### Summary
+This `CMakeLists.txt` sets up a robust, scalable Qt 6 project ready for ADAS-level development with:
+- C++17 standard
+- Modular QML integration
+- Multithreading support
+- UI controls and layouts
+- Clean project structure (`src/`, `include/`, `qml/`)
+- Debugging and cross-platform build setup
+
+Perfect for interview demonstration and real-world industrial ADAS applications.
